@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: openjdk-deploy
+  name: assign-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: openjdk
+      app: jivedh2019-assign
   template:
     metadata:
+      name: Jivedh2019
       labels:
-        app: openjdk
+        app: jivedh2019-assign
     spec:
       containers:
-        - name: openjdk-container
-          image: fatimatabassum/fatima12:IMAGE_TAG
-          ports:
-            - containerPort: 80
+      - name: my-container
+        image: jivedh2019/assign:IMAGE_TAG
+        ports:
+        - containerPort: 80

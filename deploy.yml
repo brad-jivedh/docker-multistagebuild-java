@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: assign-deployment
+  name: my-dep
 spec:
   replicas: 1
   selector:
@@ -9,7 +9,7 @@ spec:
       app: jivedh2019-assign
   template:
     metadata:
-      name: Jivedh2019
+      name: jivedh2019
       labels:
         app: jivedh2019-assign
     spec:
@@ -17,4 +17,4 @@ spec:
       - name: my-container
         image: jivedh2019/assign:IMAGE_TAG
         ports:
-        - containerPort: 80
+        - containerPort: 90

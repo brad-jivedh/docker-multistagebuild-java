@@ -30,7 +30,8 @@ stage("Pushing the image to DockerHub") {
 }
 stage("Deploying in k8s cluster") {
   steps {
-     sh 'microk8s kubectl apply -f deploy.yml -f nodeport.yml'
+     sh 'microk8s kubectl apply -f deploy.yml
+     sh 'microk8s kubectl apply -f nodeport.yml'
   }
 }
 }

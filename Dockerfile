@@ -5,5 +5,5 @@ RUN mvn clean install
 
 FROM openjdk 
 WORKDIR /app1
-COPY --from=build /app/target/*.jar ./gs-maven-0.1.0.jar
+COPY --from=build /app/target/gs-maven-0.1.0.jar ./gs-maven-0.1.0.jar
 CMD ["java" , "-jar" , "gs-maven-0.1.0.jar"]
